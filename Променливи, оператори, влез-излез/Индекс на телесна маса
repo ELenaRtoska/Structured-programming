@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main() {
+float masa, visina, BMI;
+    scanf("%f%f", &masa, &visina);
+    float visina1=visina/100;
+    BMI=masa/(visina1*visina1);
+    printf("%.2f", BMI);
+    return 0;
+    }
