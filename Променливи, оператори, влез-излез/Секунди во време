@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main() {
+int sec, casovi, minuti, sekundi;
+scanf("%d", &sec);
+casovi=sec/3600;
+int k=sec%3600;
+minuti=k/60;
+sekundi=sec%60;
+printf("%d sekundi se %d casovi, %d minuti i %d sekundi", sec, casovi, minuti, sekundi);
+return 0;
+}
