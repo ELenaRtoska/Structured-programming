@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+int n,i,j; 
+    scanf("%d", &n);
+    for(i=0;i<n;i++)
+    {
+    int z;
+        scanf("%d", &z);
+        int a[z];
+        for(j=0; j<z; j++)
+        scanf("%d", &a[j]);
+        int zbir=0;
+        for(j=0; j<z/2;j++)
+        {
+        if(a[j]==a[z-(j+1)])
+        
+            zbir+=2*a[j];
+
+    }
+    
+      printf("%d\n", zbir);
+    }
+        return 0;
+}
