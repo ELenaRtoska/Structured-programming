@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+int a, b, c, n;
+    scanf("%d", &n);
+    a=n/1000000;
+    c=n%1000;
+    b=(n%1000000)/1000;
+    
+    printf("%03d/%03d-%03d ", a, b,c);
+    if((a==70)||(a==71)||(a==72))
+        printf("T-mobile");
+    else if ((a==75)||(a==76))
+        printf("One");
+    else
+        printf("Vip");
+    return 0;
+}
