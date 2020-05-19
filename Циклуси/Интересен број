@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+int i, broj, b, obraten, n, cifra;
+    scanf("%d", &n);
+    if(n<10)
+        printf("Brojot ne e validen");
+    else
+    {
+        for(i=n-1;n>9;i--)
+        {
+         broj=i;
+         obraten=0;
+            b=0;
+            while(broj!=0)
+            {
+            cifra=broj%10;
+            obraten=obraten*10+cifra;
+                broj/=10;
+                b++;
+            }
+                if(obraten%b==0)
+                {
+                printf("%d", i);
+                    break;
+                }
+        }
+    }
+        return 0;
+    }
+                
+    
