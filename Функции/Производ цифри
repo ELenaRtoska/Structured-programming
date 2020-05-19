@@ -1,0 +1,17 @@
+#include<stdio.h>
+float proizvod(int n)
+{
+if(n==0)
+    return 1;
+    else 
+        return n%10*proizvod(n/10);
+}
+int main()
+{
+int n;
+    float res;
+    scanf("%d", &n);
+    res=proizvod(n)/n;
+    printf("%.2f", res);
+   return 0;
+}
