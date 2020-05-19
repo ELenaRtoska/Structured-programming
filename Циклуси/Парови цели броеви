@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    int z, a, b, rez=0, vkupno=0;
+    float procent;
+    scanf("%d %d %d", &z, &a, &b);
+   while(a!=0||b!=0)
+   {
+       
+       if(z==(a+b))
+      rez++;
+       scanf("%d%d", &a, &b);
+        vkupno++;
+       
+   }
+   procent=(rez*100.0)/vkupno;
+   printf("Vnesovte %d parovi od broevi chij zbir e %d\nProcentot na parovi so zbir %d e %.2f%%", rez, z, z, procent);
+   return 0;
+}
