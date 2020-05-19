@@ -1,0 +1,81 @@
+#include<stdio.h>
+int main()
+{
+int n,i,j,x,y,p,zbir,zbir1;
+    scanf("%d", &n);
+    int a[n][n], b[n][n];
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++)
+    {
+    scanf("%d", &a[i][j]);
+            b[i][j]=a[i][j];
+    }
+}
+    p=n-1;
+    for(i=0;i<n;i++)
+    {
+        zbir=zbir1=0;
+    for(j=0;j<n;j++)
+    {
+    if(i==j)
+    {
+    x=i;
+        y=j;
+        y++;
+        while(y<n)
+        {
+        zbir+=a[x][y];
+            y++;
+        }
+        x=i;
+        y=j;
+        x--;
+        while(x>=0)
+        {
+        zbir+=a[x][y];
+            x--;
+        }
+        
+    }
+        if(j==p)
+        {
+        x=i;
+            y=j;
+            y--;
+            while(y>=0)
+            {
+            zbir1+=a[x][y];
+                y--;
+            }
+            x=i;
+            y=j;
+            x++;
+            while(x<n)
+            {
+            zbir1+=a[x][y];
+                x++;
+            }
+            
+        }
+        if(i==j&&p==j)
+            b[i][j]=zbir+zbir1;
+        else{
+        if(i==j) 
+            b[i][j]=zbir;
+        if(p==j)
+            b[i][j]=zbir1;
+       
+    }
+    }
+    p--;
+    }
+
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+        printf("%d ", b[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+ 
