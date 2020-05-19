@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+void writeToFile() {
+    FILE *f = fopen("text.txt", "w");
+    char c;
+    while((c = getchar()) != '#') {
+        fputc(c, f);
+    }
+    fclose(f);
+}
+
+int main() {
+    writeToFile();
+    
+    // vasiot kod ovde
+    FILE *fp;
+    fp=fopen("text.txt", "r");
+    float cifri=0, bukvi=0;
+   char c;
+    while((c=getc(fp))!=EOF)
+           {
+    if(isalpha(c))
+        bukvi++;
+    if(isdigit(c))
+        cifri++;
+    
+}
+   fclose(fp);
+    printf("%.2f", cifri/bukvi);
+    
+}
