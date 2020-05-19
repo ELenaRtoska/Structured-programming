@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<ctype.h>
+void resenie(char *s)
+{
+    int broj, i;
+        char niza[150];
+    
+memset(niza,0,sizeof(niza));
+    for(i=0;i<strlen(s);i++)
+    {
+    broj=s[i];
+        niza[broj]=1;
+    }
+    for(i=97;i<=122;i++)
+    {
+    if(niza[i]==1)
+        printf("%c", i);
+    }
+}
+int main()
+{
+char s[100], temp, temp1;
+    int i=0;
+    while((temp1=getchar())!='\n')
+    {
+if(temp1==' ') continue;
+        temp=tolower(temp1);
+    s[i]=temp;
+    i++;
+}
+    s[i]='\0';
+    resenie(s);
+    return 0;
+}
