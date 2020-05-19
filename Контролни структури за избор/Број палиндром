@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int br, b, c;
+    scanf("%d", &br);
+    if(br<100||br>999)
+        printf("Nevaliden vlez");
+    else
+    {    b=br/100;
+    c=br%10;
+    if(b==c)
+        printf("Palindrom");
+     if(b!=c)
+         printf("Ne e palindrom");
+         }
+    return 0;
+}
