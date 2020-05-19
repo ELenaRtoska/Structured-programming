@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<string.h>
+int funk(char *s1, char *s2)
+{
+int i,n,k=0;
+    if(strlen(s1)<strlen(s2))
+        n=strlen(s1);
+    else
+        n=strlen(s2);
+    for(i=0;i<n;i++)
+    {
+    if(s1[i]==s2[i]&&s1[i]!='\0')
+    {
+    s1[i]='*';
+        s2[i]='*';
+        k++;
+    }
+    }
+ return k;
+}
+int main()
+{
+char s1[100], s2[100];
+    gets(s1);
+    gets(s2);
+    
+   printf("%d\n", funk(s1,s2));
+ puts(s1);
+    puts(s2);
+    return 0;
+        
+    
+}
