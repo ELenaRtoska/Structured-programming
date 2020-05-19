@@ -1,0 +1,38 @@
+#include<stdio.h>
+void resenie(int *niza, int *niza1, int n)
+{
+int i,temp;
+    for(i=0;i<n;i++)
+{
+    if(*(niza+i)>500&&*(niza1+i)>500)
+    {
+    *(niza+i)=0;
+    }
+    else
+    {
+    if(*(niza+i)>500&&*(niza1+i)<=500)
+    {
+    temp=*(niza+i);
+        *(niza+i)=*(niza1+i);
+        *(niza1+i)=temp;
+    }
+    }
+}
+}
+int main()
+{
+int n,i;
+    scanf("%d", &n);
+    int niza[n], niza1[n];
+    for(i=0;i<n;i++)
+    scanf("%d", &niza[i]);
+for(i=0;i<n;i++)
+scanf("%d", &niza1[i]);
+resenie(niza,niza1,n);
+for(i=0;i<n;i++)
+printf("%d ", niza[i]);
+printf("\n");
+for(i=0;i<n;i++)
+printf("%d ", niza1[i]);
+return 0;    
+}
