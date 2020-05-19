@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int a, b, c, pra, kva;
+    scanf("%d%d%d", &a, &b, &c);
+    pra=2*a+2*b;
+    kva=4*c;
+    if(pra>kva)
+        printf("Pravoagolnik");
+    if(kva>pra)
+        printf("Kvadrat");
+    if(kva==pra)
+        printf("Isti se");
+        return 0;
+    
+}
