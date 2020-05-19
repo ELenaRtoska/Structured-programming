@@ -1,0 +1,53 @@
+#include<stdio.h>
+void pomestuvanje(int broj, int mesta)
+{
+int broj1,k,n=0,i,j;
+    broj1=broj;
+    mesta=mesta*(-1);
+    while(broj1>0)
+    {
+    n++;
+        broj1/=10;
+    }
+    while(mesta<0)
+    {
+    mesta+=n;
+    }
+    int niza[n], res[n];
+    broj1=broj;
+    i=n-1;
+    while(broj1>0)
+    {
+    niza[i]=broj1%10;
+        broj1=broj1/10;
+        i--;
+    }
+    for(i=0;i<n;i++)
+    {
+    j=i;
+        k=mesta;
+        while(k>0)
+        {
+        if(j+1<n) j++;
+            else j=0;
+            k--;
+        }
+        res[j]=niza[i];
+    }
+    broj1=0;
+    for(i=0;i<n;i++)
+    {
+    broj1=broj1*10+res[i];
+    }
+    printf("%d\n", broj1);
+    }
+int main()
+{
+int n,a,b,i;
+   scanf("%d", &n);
+    for(i=0;i<n;i++){
+        scanf("%d%d", &a,  &b);
+        pomestuvanje(a,b);}
+    return 0;
+}
+    
